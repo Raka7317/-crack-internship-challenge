@@ -1,0 +1,40 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+
+
+int main(){
+ string s1,s2,sr;
+ cin>>s1;
+ cin>>s2;
+ cin>>sr;
+ int l1=s1.size();
+ int l2=s2.size();
+ int lr=sr.size();
+
+ if((l1+l2)!=lr){
+     cout<<"no";
+ }
+ else{
+     int f=0;
+     int i=0,j=0,k=0;
+     while(k<lr){
+         if(i<l1 and s1[i]==sr[k])i++;
+         else if(j<l2 and s2[j]==sr[k])j++;
+         else{
+             f=1;
+             break;
+         }
+         k++;
+     }
+     if(i<l1 or j<l2){
+         cout<<"nO";
+     }
+     else{
+         cout<<"yes";
+     }
+     
+ }
+    
+    return 0;
+}
